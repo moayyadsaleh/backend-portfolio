@@ -94,7 +94,9 @@ app.post("/api/chat", async (req, res) => {
       .json({ error: "An error occurred while processing your request." });
   }
 });
-
+app.get("/", (req, res) => {
+  res.send("Backend is live!");
+});
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
